@@ -10,6 +10,20 @@ pub fn insertion_sort(list: &mut Vec<usize>) -> () {
     }
 }
 
+pub fn selection_sort(list: &mut Vec<u32>) {
+    for i in 0..(list.len() - 1) {
+        let mut smallest = i;
+        for j in i + 1..(list.len()) {
+            if list[j] < list[smallest] {
+                smallest = j;
+            }
+        }
+        let temp = list[i];
+        list[i] = list[smallest];
+        list[smallest] = temp;
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
