@@ -1,10 +1,10 @@
-pub fn insertion_sort(list: &mut Vec<usize>) -> () {
+pub fn insertion_sort(list: &mut Vec<u32>) {
     for j in 1..list.len() {
-        let key = *&list[j];
+        let key = list[j];
         let mut i = j;
-        while i > 0 && &list[i - 1] > &key {
+        while i > 0 && list[i - 1] > key {
             list[i] = list[i - 1];
-            i = i - 1;
+            i -= 1;
         }
         list[i] = key;
     }
