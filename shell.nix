@@ -6,4 +6,5 @@ nixpkgs.mkShell {
     cargo
     rustc
   ];
+  RUST_BACKTRACE = 1;
 }
