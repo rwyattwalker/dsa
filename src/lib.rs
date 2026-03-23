@@ -22,6 +22,16 @@ pub fn selection_sort(list: &mut Vec<i32>) -> () {
     }
 }
 
+pub fn bubble_sort(list: &mut Vec<i32>) {
+    for i in 0..list.len() {
+        for j in (i + 1..list.len()).rev() {
+            if list[j] < list[j - 1] {
+                list.swap(j, j - 1);
+            }
+        }
+    }
+}
+
 pub fn merge_sort(arr: &mut [i32]) {
     let mid = arr.len() / 2;
     if mid > 0 {
